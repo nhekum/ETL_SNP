@@ -1,0 +1,7 @@
+aws-java-sdk-bundle-1.12.647.jar
+hadoop-aws-3.3.1.jar
+iceberg-aws-bundle-1.4.2.jar
+iceberg-spark-runtime-3.5_2.12-1.4.2.jar
+ojdbc7-12.1.0.2.jar
+postgresql-42.5.1.jar
+spark-avro_2.12-3.5.0.jar
