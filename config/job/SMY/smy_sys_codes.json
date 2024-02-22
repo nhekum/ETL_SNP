@@ -1,0 +1,26 @@
+{
+    "SOURCE_SCHEMA" : "DWH_SNP_STG",    
+    "SOURCE_TABLE" : "STG_SYS_CODES",
+    "SOURCE_ALL_COL" : ["CODE_TP", "CODE_REF", "UPD_TS", "DESCR"],
+    
+    "TARGET_SCHEMA" : "DWH_SNP_SMY",
+    "TARGET_TABLE" : "SMY_SYS_CODES",
+    "TARGET_ALL_COL" : ["CODE_TP", "CODE_REF", "UPD_TS", "DESCR", "ETL_DATE"],
+    "TARGET_ETL_DATE" : "ETL_DATE",
+
+    "TARGET_TRANSFORM_COL":[],
+    "TARGET_TRANSFORM_EXPR": [],
+    
+    "PARAM_SCHEMA":"DWH_SNP_FACT",
+    "PARAM_TABLE":"DWH_PARAM",
+
+    "LOG_SCHEMA": "DWH_SNP_SMY",
+    "LOG_TABLE" : "SMY_ETL_LOG",
+
+    "DAG_TYPE_JOB" : "SMY",
+    "DAG_APP_NAME" : "SMY_SYS_CODES",
+
+    "AIRFLOW_NAME":"smy_sys_codes",
+    "AIRFLOW_DESCRIPTION":"",
+    "AIRFLOW_TAGS":["etl", "smy", "spark", "tancang","snp", "poc", "postgres"]
+}

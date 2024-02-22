@@ -1,0 +1,36 @@
+{   
+    "SOURCE_SCHEMA" : "DWH_SMY",
+    "SOURCE_TABLE" : "SMY_CHI_TIET_HOA_DON",
+    "SOURCE_ALL_COL" : ["KY", "DOT", "GIANUOC", "LHSD" , "LNSD", "ETL_DATE"],
+    "SOURCE_DATE_COL" : ["ETL_DATE"],
+    "SOURCE_ID_KEY" : [], 
+    "SOURCE_TABLE_KEY" : [],
+    "SOURCE_ETL_DATE" : "ETL_DATE",
+    "SOURCE_ALIAS" : ["ETL_DATE", "LNSD"],
+
+    "TARGET_SCHEMA" : "DWH_FACT",
+    "TARGET_TABLE" : "FACT_SAN_LUONG_RP018",
+    "TARGET_ALL_COL" : ["NGAY_DL", "DIM_KY_DOT_ID", "DIM_DON_GIA_ID", "DIM_LOAI_HINH_SD_ID", "SAN_LUONG"],
+    "TARGET_DATE_COL" : ["NGAY_DL"],
+    "TARGET_ID_KEY" : [], 
+    "TARGET_TABLE_KEY" : ["NGAY_ETL"], 
+    "TARGET_ALIAS" : ["NGAY_DL", "SAN_LUONG"],
+
+    "TARGET_GROUP_BY" : "",
+    "TARGET_FILTER_COL" : "",
+    "TARGET_FILTER_KEY" : "",
+    "TARGET_METHOD" : "",
+    "TARGET_METHOD_COL" : "",
+    "TARGET_METHOD_ALIAS" : "", 
+    "TARGET_ETL_DATE" : "NGAY_DL",
+    
+    "LOG_SCHEMA": "DWH_FACT",
+    "LOG_TABLE" : "FACT_ETL_LOG",
+    
+    "DAG_TYPE_JOB" : "FACT",
+    "DAG_APP_NAME" : "FACT_SAN_LUONG_RP018",
+
+    "AIRFLOW_NAME":"fact_chi_tiet_san_luong",
+    "AIRFLOW_DESCRIPTION": "fact chi tiet san luong",
+    "AIRFLOW_TAGS":["etl", "fact", "spark","snp", "poc", "postgres"]
+}

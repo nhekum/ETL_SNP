@@ -1,0 +1,11 @@
+{
+    "DB_FORMAT" : "jdbc",
+    "DB_TYPE" : "oracle",
+    "DB_USER" : "BIGDATA",
+    "DB_PASSWORD" : "Vdi2024",
+    "DB_SERVER" :  "172.16.69.14",
+    "DB_PORT" : "1521",
+    "DB_SERVICE_NAME" : "ORCLPDB",
+    "DB_URL" : "jdbc:oracle:thin:@172.16.69.14:1521/ORCLPDB",
+    "DB_DRIVER" : "oracle.jdbc.driver.OracleDriver"
+}

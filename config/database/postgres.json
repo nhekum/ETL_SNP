@@ -1,0 +1,11 @@
+{
+    "DB_FORMAT" : "jdbc",
+    "DB_TYPE" : "postgresql",
+    "DB_USER" : "postgres",
+    "DB_PASSWORD" : "Vdi2024",
+    "DB_SERVER" :  "172.16.69.15",
+    "DB_PORT" : "5432",
+    "DB_SERVICE_NAME" : "postgres",
+    "DB_URL" : "jdbc:postgresql://172.16.69.15:5432/TANCANG",
+    "DB_DRIVER" : "org.postgresql.Driver"
+}

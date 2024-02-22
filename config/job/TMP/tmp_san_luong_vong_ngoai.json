@@ -1,0 +1,33 @@
+{
+    "SOURCE_SCHEMA" : "DWH_SNP_SMY",    
+    "SOURCE_TABLE" : "TMP_V_EXTERNAL_TRANSPORT_V2",
+    "SOURCE_ALL_COL" : ["CHE_ID","CAT_TYPE","MOVE_TYPE","IS_SCAN","IS_VIRTUAL_SCAN","REPORT_MOVE_TYPE","YARD_AREA_FR","YARD_AREA_TO","FROM_AREA_REPORT",
+                        "TO_AREA_REPORT","FROM_MANAGE_REPORT","TO_MANAGE_REPORT","FEL","LENGTH","ISO","BILL_TYPE","CHE_OPER","CHE_TYPE","IS_REEFER",
+                        "IS_OOG","IS_DANGEROUS","VES_ID","VES_TYPE","COMPANY","MANAGEBY","PLACE_OF_DELIVERY","PLACE_OF_RECEIPT","IN_OUT","TRANSFER_REASON_CD",
+                        "OPERATION_NAME","TOTALCONT","REPORT_MONTH","EXEC_TS"
+                        ],
+    
+    "TARGET_SCHEMA" : "DWH_SNP_SMY",
+    "TARGET_TABLE" : "TMP_SAN_LUONG_VONG_NGOAI",
+    "TARGET_ALL_COL" :["CHE_ID","CAT_TYPE","MOVE_TYPE","IS_SCAN","IS_VIRTUAL_SCAN","REPORT_MOVE_TYPE","YARD_AREA_FR","YARD_AREA_TO","FROM_AREA_REPORT",
+                        "TO_AREA_REPORT","FROM_MANAGE_REPORT","TO_MANAGE_REPORT","FEL","LENGTH","ISO","BILL_TYPE","CHE_OPER","CHE_TYPE","IS_REEFER",
+                        "IS_OOG","IS_DANGEROUS","VES_ID","VES_TYPE","COMPANY","MANAGEBY","PLACE_OF_DELIVERY","PLACE_OF_RECEIPT","IN_OUT","TRANSFER_REASON_CD",
+                        "OPERATION_NAME","TOTALCONT","REPORT_MONTH","EXEC_TS",
+                        "ETL_DATE"
+                    ],
+    "TARGET_DATE_COL" : ["ETL_DATE"],
+    "TARGET_TABLE_KEY" : [],
+    "TARGET_DATE_VAR" : " ",
+    "TARGET_ETL_DATE" : "ETL_DATE",
+    
+    "LOG_SCHEMA": "DWH_SNP_SMY",
+    "LOG_TABLE" : "SMY_ETL_LOG",
+
+    "DAG_TYPE_JOB" : "TMP",
+    "DAG_APP_NAME" : "TMP_SAN_LUONG_VONG_NGOAI",
+
+    "AIRFLOW_NAME":"tmp_san_luong_vong_ngoai",
+    "AIRFLOW_DESCRIPTION":"Luu thong tin bang tam tinh san luong vong ngoai tu view temp vao summary",
+    "AIRFLOW_TAGS":["etl", "smy", "spark","tmp", "snp", "poc", "postgres"]
+    
+}

@@ -1,0 +1,37 @@
+{   
+    "ICEBERG_CATOLOG" : "minio",
+
+    "SOURCE_SCHEMA" : "DWH_RAW", 
+    "SOURCE_TABLE" : "RAW_CHE_PRODUCTIVITY_DETAILS",
+    "SOURCE_ALL_COL" : ["ITEM_KEY","EXEC_TS","MOVE_TYPE","CAT_TYPE","IN_OUT","ITEM_NO","FEL","ISO","LENGTH","BILL_TYPE","CHE_ID","CHE_TYPE","CHE_OPER",
+                        "PLACE_OF_DELIVERY","PLACE_OF_RECEIPT","VES_ID","VES_TYPE","INTERNAL_MOVE_CD","HIST_FLG","COMPLETE_TS","STACK","X","Y","Z",
+                        "TO_STACK","TO_X","TO_Y","TO_Z","CATEGORY","ARR_TS","DEP_TS","CREATED_TS","CREATED_BY","LAST_UPD_TS","LAST_UPD_BY","OPERATION_METHOD",
+                        "TRANSFER_REASON_CD","REPORT_TS","REPORT_MONTH"
+                        ],
+    "SOURCE_DATE_COL" : [],
+    "SOURCE_CONDITION" : ["EXEC_TS"],
+
+    "TARGET_SCHEMA" : "DWH_STG",
+    "TARGET_TABLE" : "STG_CHE_PRODUCTIVITY_DETAILS",
+    "TARGET_ALL_COL" : ["ITEM_KEY", "EXEC_TS", "MOVE_TYPE", "CAT_TYPE", "IN_OUT", "ITEM_NO", "FEL", "ISO",
+                        "LENGTH", "BILL_TYPE", "CHE_ID", "CHE_TYPE", "CHE_OPER", "PLACE_OF_DELIVERY", "PLACE_OF_RECEIPT",
+                        "VES_ID", "VES_TYPE", "INTERNAL_MOVE_CD", "HIST_FLG", "COMPLETE_TS", "STACK", "X", "Y", "Z",
+                        "TO_STACK", "TO_X", "TO_Y", "TO_Z", "CATEGORY", "ARR_TS", "DEP_TS", "CREATED_TS", "CREATED_BY",
+                        "LAST_UPD_TS", "LAST_UPD_BY", "OPERATION_METHOD", "TRANSFER_REASON_CD", "REPORT_TS", "REPORT_MONTH"
+                    ],
+    "TARGET_DATE_COL" : [],
+    
+    "PARAM_SCHEMA":"DWH_FACT",
+    "PARAM_TABLE":"DWH_PARAM",
+    "PARAM_CONDITION": ["ETL_DATE"],
+
+    "LOG_SCHEMA" : "DWH_STG",
+    "LOG_TABLE" : "STG_ETL_LOG",
+
+    "DAG_TYPE_JOB" : "STG",
+    "DAG_APP_NAME" : "STG_CHE_PRODUCTIVITY_DETAILS",
+
+    "AIRFLOW_NAME":"stg_che_productivity_details",
+    "AIRFLOW_DESCRIPTION":"",
+    "AIRFLOW_TAGS":["etl", "stg", "spark", "tancang", "snp", "poc","postgres"]
+}

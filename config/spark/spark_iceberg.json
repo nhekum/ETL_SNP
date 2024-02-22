@@ -1,0 +1,14 @@
+{
+    "spark.appName": "ETL",
+    "spark.master": "local[*]",
+    "spark.jars": "/home/vdi-lab/airflow/airflowhome/dags/config/jars/aws-java-sdk-bundle-1.12.647.jar,/home/vdi-lab/airflow/airflowhome/dags/config/jars/iceberg-aws-bundle-1.4.2.jar,/home/vdi-lab/airflow/airflowhome/dags/config/jars/iceberg-spark-runtime-3.5_2.12-1.4.2.jar,/home/vdi-lab/airflow/airflowhome/dags/config/jars/spark-avro_2.12-3.5.0.jar,/home/vdi-lab/airflow/airflowhome/dags/config/jars/postgresql-42.5.1.jar,/home/vdi-lab/airflow/airflowhome/dags/config/jars/ojdbc7-12.1.0.2.jar",
+    "spark.driver.extraClassPath": "/home/vdi-lab/airflow/airflowhome/dags/config/jars/aws-java-sdk-bundle-1.12.647.jar:/home/vdi-lab/airflow/airflowhome/dags/config/jars/iceberg-aws-bundle-1.4.2.jar:/home/vdi-lab/airflow/airflowhome/dags/config/jars/iceberg-spark-runtime-3.5_2.12-1.4.2.jar:/home/vdi-lab/airflow/airflowhome/dags/config/jars/spark-avro_2.12-3.5.0.jar:/home/vdi-lab/airflow/airflowhome/dags/config/jars/postgresql-42.5.1.jar:/home/vdi-lab/airflow/airflowhome/dags/config/jars/ojdbc7-12.1.0.2.jar",
+    "spark.sql.extensions": "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
+    "spark.sql.catalog.minio_catalog": "org.apache.iceberg.spark.SparkCatalog",
+    "spark.sql.catalog.minio_catalog.type": "rest",
+    "spark.sql.catalog.minio_catalog.uri": "http://172.16.69.12:8181",
+    "spark.sql.catalog.minio_catalog.io-impl": "org.apache.iceberg.aws.s3.S3FileIO",
+    "spark.sql.catalog.minio_catalog.warehouse": "s3://iceberg/warehouse/",
+    "spark.sql.catalog.minio_catalog.s3.endpoint": "http://172.16.69.4:9000",
+    "spark.sql.defaultCatalog": "minio_catalog"
+}

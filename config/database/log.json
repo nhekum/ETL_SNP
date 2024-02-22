@@ -1,0 +1,11 @@
+{
+    "DB_FORMAT" : "jdbc",
+    "DB_TYPE" : "postgresql",
+    "DB_USER" : "postgres",
+    "DB_PASSWORD" : "Vdc2023",
+    "DB_SERVER" :  "27.71.16.50",
+    "DB_PORT" : "5432",
+    "DB_SERVICE_NAME" : "postgres",
+    "DB_URL" : "jdbc:postgresql://27.71.16.50:5432/postgres",
+    "DB_DRIVER" : "org.postgresql.Driver"
+}

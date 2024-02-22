@@ -1,0 +1,26 @@
+{
+    "SOURCE_SCHEMA" : "DWH_SNP_STG",    
+    "SOURCE_TABLE" : "STG_YARD_AREA",
+    "SOURCE_ALL_COL" : ["AREA", "STACK", "FR_DATE", "TO_DATE", "MANAGE_BY", "SCAN_AREA", "IS_VIRTUAL_HEAP_STACK", "FUMIGATE_AREA", "UPD_TS"],
+    
+    "TARGET_SCHEMA" : "DWH_SNP_SMY",
+    "TARGET_TABLE" : "SMY_YARD_AREA",
+    "TARGET_ALL_COL" : ["AREA", "STACK", "FR_DATE", "TO_DATE", "MANAGE_BY", "SCAN_AREA", "IS_VIRTUAL_HEAP_STACK", "FUMIGATE_AREA", "UPD_TS", "ETL_DATE"],
+    "TARGET_ETL_DATE" : "ETL_DATE",
+
+    "TARGET_TRANSFORM_COL":[],
+    "TARGET_TRANSFORM_EXPR": [],
+    
+    "PARAM_SCHEMA":"DWH_SNP_FACT",
+    "PARAM_TABLE":"DWH_PARAM",
+
+    "LOG_SCHEMA": "DWH_SNP_SMY",
+    "LOG_TABLE" : "SMY_ETL_LOG",
+
+    "DAG_TYPE_JOB" : "SMY",
+    "DAG_APP_NAME" : "SMY_YARD_AREA",
+
+    "AIRFLOW_NAME":"smy_yard_area",
+    "AIRFLOW_DESCRIPTION":"",
+    "AIRFLOW_TAGS":["etl", "smy", "spark", "tancang","snp", "poc", "postgres"]
+}

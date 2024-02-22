@@ -1,0 +1,30 @@
+{   
+    "SOURCE_TABLE" : "SMY_CHE_COMPANY",
+    "SOURCE_SCHEMA" : "DWH_SNP_SMY",
+    "SOURCE_ALL_COL" : ["CHE_ID", "COMPANY","MANAGE_BY","AS_AT_TS","EXPIRY_TS"],
+    "SOURCE_DATE_COL" : ["ETL_DATE"],
+    "SOURCE_ID_KEY" : [], 
+    "SOURCE_DATE_VAR" : "",
+    "SOURCE_ETL_DATE" : "ETL_DATE",
+    "SOURCE_ALIAS" : [ ],
+    
+    "TARGET_TABLE" : "DIM_PHUONG_TIEN",
+    "TARGET_SCHEMA" : "DWH_SNP_DIM",
+    "TARGET_ALL_COL" : ["ID","CHE_ID", "COMPANY","MANAGE_BY","AS_AT_TS","EXPIRY_TS", "TRANG_THAI_BG", "NGAY_HL_BG","NGAY_HH_BG"],
+    "TARGET_DATE_COL" : [],
+    "TARGET_ID_KEY" : "ID", 
+    "TARGET_TABLE_KEY" : "TRANG_THAI_BG",
+    "TARGET_KEY_REGEX" : "BG",
+    "TARGET_ALIAS" : ["TEN_DG"],
+    
+    "SCD_TYPE" : "1",
+    "DAG_TYPE_JOB" : "DIM",
+    "DAG_APP_NAME" : "DIM_PHUONG_TIEN",
+
+    "LOG_SCHEMA": "DWH_SNP_DIM",
+    "LOG_TABLE" : "DIM_ETL_LOG",
+
+    "AIRFLOW_NAME":"dim_phuong_tien",
+    "AIRFLOW_DESCRIPTION": "Etl dim danh mục phuong tien",
+    "AIRFLOW_TAGS":["etl", "dim", "spark", "snp", "poc", "postgres"]
+}

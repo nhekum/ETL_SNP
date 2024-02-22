@@ -1,0 +1,11 @@
+{
+    "DB_FORMAT" : "iceberg",
+    "DB_TYPE" : "s3",
+    "DB_USER" : "minio",
+    "DB_PASSWORD" : "minio123",
+    "DB_SERVER" :  "172.16.69.4",
+    "DB_PORT" : "9000",
+    "DB_REGION" : "us-east-1",
+    "DB_DRIVER" : "org.apache.hadoop.fs.s3a.S3AFileSystem",
+    "DB_REST_URI" : "http://172.16.69.12:8181"
+}

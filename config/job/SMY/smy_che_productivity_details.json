@@ -1,0 +1,38 @@
+{
+    "SOURCE_SCHEMA" : "DWH_STG",    
+    "SOURCE_TABLE" : "STG_CHE_PRODUCTIVITY_DETAILS",
+    "SOURCE_ALL_COL" : ["ITEM_KEY", "EXEC_TS", "MOVE_TYPE", "CAT_TYPE", "IN_OUT", "ITEM_NO", "FEL", "ISO",
+                        "LENGTH", "BILL_TYPE", "CHE_ID", "CHE_TYPE", "CHE_OPER", "PLACE_OF_DELIVERY", "PLACE_OF_RECEIPT",
+                        "VES_ID", "VES_TYPE", "INTERNAL_MOVE_CD", "HIST_FLG", "COMPLETE_TS", "STACK", "X", "Y", "Z",
+                        "TO_STACK", "TO_X", "TO_Y", "TO_Z", "CATEGORY", "ARR_TS", "DEP_TS", "CREATED_TS", "CREATED_BY",
+                        "LAST_UPD_TS", "LAST_UPD_BY", "OPERATION_METHOD", "TRANSFER_REASON_CD", "REPORT_TS", "REPORT_MONTH"
+                        ],
+    "SOURCE_CONDITION" : ["EXEC_TS"],
+
+    "TARGET_SCHEMA" : "DWH_SMY",
+    "TARGET_TABLE" : "SMY_CHE_PRODUCTIVITY_DETAILS",
+    "TARGET_ALL_COL" : ["ITEM_KEY", "EXEC_TS", "MOVE_TYPE", "CAT_TYPE", "IN_OUT", "ITEM_NO", "FEL", "ISO",
+                        "LENGTH", "BILL_TYPE", "CHE_ID", "CHE_TYPE", "CHE_OPER", "PLACE_OF_DELIVERY", "PLACE_OF_RECEIPT",
+                        "VES_ID", "VES_TYPE", "INTERNAL_MOVE_CD", "HIST_FLG", "COMPLETE_TS", "STACK", "X", "Y", "Z",
+                        "TO_STACK", "TO_X", "TO_Y", "TO_Z", "CATEGORY", "ARR_TS", "DEP_TS", "CREATED_TS", "CREATED_BY",
+                        "LAST_UPD_TS", "LAST_UPD_BY", "OPERATION_METHOD", "TRANSFER_REASON_CD", "REPORT_TS", "REPORT_MONTH", "ETL_DATE"
+                    ],
+    "TARGET_ETL_DATE" : "ETL_DATE",
+
+    "TARGET_TRANSFORM_COL":[],
+    "TARGET_TRANSFORM_EXPR": [],
+    
+    "PARAM_SCHEMA":"DWH_FACT",
+    "PARAM_TABLE":"DWH_PARAM",
+    "PARAM_CONDITION": ["ETL_DATE"],
+
+    "LOG_SCHEMA": "DWH_SMY",
+    "LOG_TABLE" : "SMY_LOG",
+
+    "DAG_TYPE_JOB" : "SMY",
+    "DAG_APP_NAME" : "SMY_CHE_PRODUCTIVITY_DETAILS",
+
+    "AIRFLOW_NAME":"smy_che_productivity_details",
+    "AIRFLOW_DESCRIPTION":"",
+    "AIRFLOW_TAGS":["etl", "smy", "spark", "tancang","snp", "poc", "postgres"]
+}

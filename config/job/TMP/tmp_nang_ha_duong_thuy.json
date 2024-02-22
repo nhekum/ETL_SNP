@@ -1,0 +1,32 @@
+{
+    "SOURCE_SCHEMA" : "DWH_SNP_SMY",    
+    "SOURCE_TABLE" : "TMP_V_CHE_PRODUCTIVITY_DETAILS",
+    "SOURCE_ALL_COL" : ["MOVE_TYPE", "CAT_TYPE", "IN_OUT", "COMPLETE_TS", "REPORT_TS", "VES_TYPE", "OPERATION_METHOD", "TRANSFER_REASON_CD", "TRANFER_LINK_DEPOT", "R_D", 
+                        "OPERATION_NAME", "RECEIVAL_PLACE", "VES_ID", "ITEM_KEY", "EXEC_TS", "ITEM_NO", "FEL", "ISO", "LENGTH", "BILL_TYPE", "CHE_ID", "CHE_TYPE", "CHE_OPER",
+                        "PLACE_OF_DELIVERY", "PLACE_OF_RECEIPT", "INTERNAL_MOVE_CD", "HIST_FLG", "STACK", "X", "Y", "Z", "TO_STACK", "TO_X", "TO_Y", "TO_Z", "TO_STACK2",
+                        "TO_STACK3", "CATEGORY", "ARR_TS", "DEP_TS", "CREATED_TS", "CREATED_BY", "LAST_UPD_TS", "LAST_UPD_BY", "REPORT_MONTH", "ETL_DATE"],
+    
+    "TARGET_SCHEMA" : "DWH_SNP_SMY",
+    "TARGET_TABLE" : "TMP_NANG_HA_DUONG_THUY",
+    "TARGET_ALL_COL" :["CHE_ID","CAT_TYPE","MOVE_TYPE","REPORT_MOVE_TYPE","YARD_AREA_FR","YARD_AREA_TO","FROM_AREA_REPORT","FROM_MANAGE_REPORT",
+                        "TO_AREA_REPORT","TO_MANAGE_REPORT","IS_REEFER","IS_OOG","IS_DANGEROUS","FEL","LENGTH","ISO","BILL_TYPE","CHE_OPER","CHE_TYPE",
+                        "VES_ID","VES_TYPE","COMPANY","MANAGEBY","PLACE_OF_DELIVERY","PLACE_OF_RECEIPT","IN_OUT","ITEM_NO","ITEM_KEY","REPORT_MONTH","EXEC_TS",
+                        "OLD_EXEC_TS","ROW_ID","TRANSFER_REASON_CD","OPERATION_NAME","IS_SCAN","IS_VIRTUAL_SCAN",
+                        "ETL_DATE"
+                    ],
+    "TARGET_DATE_COL" : ["ETL_DATE"],
+    "TARGET_TABLE_KEY" : [],
+    "TARGET_DATE_VAR" : " ",
+    "TARGET_ETL_DATE" : "ETL_DATE",
+    
+    "LOG_SCHEMA": "DWH_SNP_SMY",
+    "LOG_TABLE" : "SMY_ETL_LOG",
+
+    "DAG_TYPE_JOB" : "TMP",
+    "DAG_APP_NAME" : "TMP_NANG_HA_DUONG_THUY",
+
+    "AIRFLOW_NAME":"tmp_nang_ha_duong_thuy",
+    "AIRFLOW_DESCRIPTION":"Luu thong tin bang tam view nang ha duong thuy tu staging vao summary",
+    "AIRFLOW_TAGS":["etl", "smy", "spark", "tmp","snp", "poc", "postgres"]
+    
+}
