@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 config/jars
 __pycache__
+etl/fact/*
+etl/tmp/tmp*

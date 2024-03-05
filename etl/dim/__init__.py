@@ -1,0 +1,1 @@
+from etl.dim import main as smy2dim

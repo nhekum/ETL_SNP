@@ -73,7 +73,7 @@ class Spark():
             self.set_db_config(db_config)
             try:
                 if self.driver :
-                    print("Have driver")
+                    print("Have driver", query)
                     df = self.session.read.format(format_read) \
                                     .option("url", self.url) \
                                     .option("query", query) \
